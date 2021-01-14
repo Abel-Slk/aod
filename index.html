@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Главная</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="wrapper">
+			<main class="page">
+<header class="header">
+	<!-- <div class="container"> - в данном слчае нам по макету контейнер не нужен! Нет там у хедера ограничения по ширине! -->
+		<div class="header__row">
+			<div class="header__logo">
+				<img src="../img/logo.png" alt="">
+			</div>
+			<!-- html меню с иконкой бургера -->
+			<div class="header__menu menu">
+				<div class="menu__icon icon-menu"><!-- это нужно будет для меню бургер именно к классу icon-menu привязана работа скрипта в script.js который  добавляют убирает класс -->
+						<span></span>
+						<span></span>
+						<span></span>
+						<!-- можно и один спан (как у вроке про бургер) - говорит просто тут была заготовка под 3 спана -->
+				</div>
+				<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="" class="menu__link">about us</a></li>
+							<li><a href="" class="menu__link">work</a></li>
+							<li><a href="" class="menu__link">shop</a></li>
+							<li><a href="" class="menu__link">contact</a></li>
+						</ul>
+				</nav>
+			</div>
+		</div>
+	<!-- </div> -->
+</header>
+				<!-- фуллскриновый блок -->
+				<div class="main-screen">
+					<div class="main-screen__bg ibg">
+						<img src="../img/bg_main.jpg" alt=""><!-- картинка сама по себе не занимает всю ширину как нам надо для фуллскрин блока - поэтому я добавляю сюда класс ibg (к которому привязана функция ibg() in script.js и стили .ibg in ui.scss). In v1.1 во всех браузерах кроме IE это делает просто обычную адаптивность картинки с ипользованием object-fit - а в IE картинка у нас исчезает потому что она стала фоном. размеров у блока пока что никакого нет поэтому и показываться она не будет (пока не добавим размеры в стилях). теперь картинка которую я подключил через img является фоновой картинкой для блока main-screen__bg -->
+						<!-- IE11 не позволяет использовать св-ва object-fit & object-position - и на этот случай мы используем ф-ию ibg() которая сработает если это IE - и перенесет картинку указанную в img's src in HTML into background (remember that the same functionality of object-fit & object-position can be achieved using background - but whenever possible we use object-fit & object-position just cause it's a better practice to have images in HTML - but in IE we just can't) -->
+					</div>
+				</div>
+
+				<!-- остальной контент -->
+				<div class="content"></div>
+
+<footer class="footer">
+	<div class='container'>
+		<div class="footer__row">
+			
+		</div>
+	</div>
+</footer>			</main>
+
+		</div>
+<div class="popup">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content">
+				<div class="popup-close"></div>
+				<div class="popup__title"></div>
+				<div class="popup__txt"></div>
+				<form action="#" class="popup-form form">
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+					</div>
+					<div class="form-button">
+						<button type="submit" class="form__btn btn fw"></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-video">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-close"></div>
+			<div class="popup-video__value video"></div>
+		</div>
+	</div>
+</div><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js" ></script>
+	</body>
+</html>
