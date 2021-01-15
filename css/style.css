@@ -106,6 +106,7 @@ body.lock {
 }
 .container {
 	max-width: 1130px;
+	margin: 0 auto;
 	padding: 0 15px;
 }
 
@@ -559,29 +560,6 @@ body.ie .ibg img {
 	}
 }
 
-/*
-	Стиль иконки бургера
-	.icon-menu{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
-*/
 .page {
 	position: absolute;
 	top: 0;
@@ -610,4 +588,137 @@ body.ie .ibg img {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.newgeneration {
+	padding: 120px 0;
+	background-color: #f7f7f7;
+}
+@media (max-width: 900px) {
+	.newgeneration {
+		padding: 80px 0;
+	}
+}
+@media (max-width: 600px) {
+	.newgeneration {
+		padding: 30px 0;
+	}
+}
+
+.block {
+	text-align: center;
+}
+
+.block__icon {
+	margin: 0px 0px 30px 0px;
+}
+
+.block__title {
+	color: #353738;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 3.6px;
+	margin: 0px 0px 18px 0px;
+	line-height: 24px;
+}
+
+.block__text {
+	color: #848789;
+	font-size: 18px;
+	line-height: 34px;
+}
+.block__text_j {
+	text-align: justify;
+	font-size: 16px;
+	line-height: 30px;
+}
+.block__text_j:after {
+	content: "";
+	display: block;
+	margin: 35px auto 0 auto;
+	width: 50px;
+	height: 1px;
+	background-color: #d7d7d7;
+}
+
+.brands__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+}
+
+.brands__column {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 33.333%;
+	        flex: 0 1 33.333%;
+}
+.brands__column_b {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 66.667%;
+	        flex: 0 1 66.667%;
+}
+
+.brands__content {
+	padding: 70px 65px 55px 65px;
+	position: relative;
+	z-index: 2;
+}
+.brands__content:after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin: 0px 0px 0px -10px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #fff;
+}
+
+.brands__image {
+	padding: 0px 0px 37.51% 0px;
+}
+
+.item {
+	height: 100%;
+	display: block;
+	position: relative;
+}
+.item__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.item .item__logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	background-color: rgba(100, 194, 158, 0.5);
+	opacity: 0;
+	visibility: hidden;
+}
+.item:hover .item__logo {
+	opacity: 1;
+	visibility: visible;
 }

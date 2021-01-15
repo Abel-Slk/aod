@@ -25,7 +25,7 @@
 						<span></span>
 						<span></span>
 						<span></span>
-						<!-- можно и один спан (как у вроке про бургер) - говорит просто тут была заготовка под 3 спана -->
+						<!-- можно и один спан (как у вроке про бургер) - говорит просто тут была заготовка под 3 спана в стилях -->
 				</div>
 				<nav class="menu__body">
 						<ul class="menu__list">
@@ -48,7 +48,46 @@
 				</div>
 
 				<!-- остальной контент -->
-				<div class="content"></div>
+				<div class="content">
+					<section class="newgeneration">
+						<div class="container">
+							<div class="newgeneration__block block"><!-- вижу что эт блок где-то схож с дальнейшими блоками поэтому почему бы не создать нам отдельный блок под это все дело можно его и назвать блок -->
+								<div class="block__icon">
+									<img src="../img/icons/title/Icon1.png" alt="">
+								</div>
+								<h1 class="block__title">A NEW GENERATION OF VINTAGE BIKE</h1>
+								<div class="block__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </div>
+							</div>
+						</div>
+					</section>
+					<section class="brands">
+						<div class="brands__row">
+							<div class="brands__column brands__column_b">
+								<a href="" class="brands__item item"><!-- одна колонка содержит один item -->
+									<!-- using spans below cause Nesting a div into an anchor tag is not valid -->
+									<span class="item__logo">
+										<img src="../img/logos/Logo1.png" alt="">
+									</span>
+									<span class="item__image ibg"><!-- как мы уже знаем имейдж нам стоит сделать через ibg чтобы более гибко управлять нашим фоном -->
+										<img src="../img/brands/1.jpg" alt="">
+									</span>
+								</a>
+							</div>
+							<div class="brands__column">
+								<div class="brands__content block"><!-- видим что это у нас очень схожа с блоком newgeneration - немножко отличается только размер шрифта текста и текст justified и еще есть какая-то полосочка декоративной и стрелочка. беру просто безбожно копирую весь этот блок блок заимствуем его у generation -->
+									<div class="block__icon">
+										<img src="../img/icons/title/Icon2.png" alt="">
+									</div>
+									<h2 class="block__title">vintage Oliva</h2><!-- h1 у нас меняется на h2 сразу  -->
+									<div class="block__text block__text_j">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived. </div><!-- модифицируем наш текст как j будет означать justify -->
+								</div>
+								<div class="brands__image ibg">
+									<img src="../img/brands/2.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 
 <footer class="footer">
 	<div class='container'>
