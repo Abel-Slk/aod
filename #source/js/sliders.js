@@ -1,6 +1,28 @@
-//SLIDERS
-if($('.mainslider').length>0){
-	$('.mainslider').slick({
+// //SLIDERS
+// if($('.slider__body').length>0){
+// 	$('.mslider__body').slick({
+// 		//autoplay: true,
+// 		//infinite: false,
+// 		dots: true,
+// 		arrows: false,
+// 		accessibility:false,
+// 		slidesToShow:1,
+// 		autoplaySpeed: 3000,
+// 		//asNavFor:'',
+// 		//appendDots:
+// 		//appendArrows:$('.mainslider-arrows .container'),
+// 		nextArrow:'<button type="button" class="slick-next"></button>',
+// 		prevArrow:'<button type="button" class="slick-prev"></button>',
+// 		responsive: [{
+// 			breakpoint: 768,
+// 			settings: {}
+// 		}]
+// 	});
+// }
+
+// the template above doesn't work for some reason - but the code from aod did:
+if($('.slider__body').length>0){
+	$('.slider__body').slick({
 		//autoplay: true,
 		//infinite: false,
 		dots: true,
@@ -8,9 +30,7 @@ if($('.mainslider').length>0){
 		accessibility:false,
 		slidesToShow:1,
 		autoplaySpeed: 3000,
-		//asNavFor:'',
-		//appendDots:
-		//appendArrows:$('.mainslider-arrows .container'),
+		adaptiveHeight:true, // чтобы высота слайдера автоматически подстраивалась под высоту контента текущего слайда
 		nextArrow:'<button type="button" class="slick-next"></button>',
 		prevArrow:'<button type="button" class="slick-prev"></button>',
 		responsive: [{
@@ -19,6 +39,8 @@ if($('.mainslider').length>0){
 		}]
 	});
 }
+
+
 /*
 
 
