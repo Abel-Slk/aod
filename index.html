@@ -14,18 +14,17 @@
 		<div class="wrapper">
 			<main class="page">
 <header class="header">
-	<!-- <div class="container"> - в данном слчае нам по макету контейнер не нужен! Нет там у хедера ограничения по ширине! -->
+	<!-- <div class="container"> -->
 		<div class="header__row">
 			<div class="header__logo">
 				<img src="../img/logo.png" alt="">
 			</div>
 			<!-- html меню с иконкой бургера -->
 			<div class="header__menu menu">
-				<div class="menu__icon icon-menu"><!-- это нужно будет для меню бургер именно к классу icon-menu привязана работа скрипта в script.js который  добавляют убирает класс -->
-						<span></span>
-						<span></span>
-						<span></span>
-						<!-- можно и один спан (как у вроке про бургер) - говорит просто тут была заготовка под 3 спана в стилях -->
+				<div class="menu__icon icon-menu"><!-- к классу icon-menu привязана работа скрипта в script.js -->
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 				<nav class="menu__body">
 						<ul class="menu__list">
@@ -42,8 +41,7 @@
 				<!-- фуллскриновый блок -->
 				<div class="main-screen">
 					<div class="main-screen__bg ibg">
-						<img src="../img/bg_main.jpg" alt=""><!-- картинка сама по себе не занимает всю ширину как нам надо для фуллскрин блока - поэтому я добавляю сюда класс ibg (к которому привязана функция ibg() in script.js и стили .ibg in ui.scss). In v1.1 во всех браузерах кроме IE это делает просто обычную адаптивность картинки с ипользованием object-fit - а в IE картинка у нас исчезает потому что она стала фоном. размеров у блока пока что никакого нет поэтому и показываться она не будет (пока не добавим размеры в стилях). теперь картинка которую я подключил через img является фоновой картинкой для блока main-screen__bg -->
-						<!-- IE11 не позволяет использовать св-ва object-fit & object-position - и на этот случай мы используем ф-ию ibg() которая сработает если это IE - и перенесет картинку указанную в img's src in HTML into background (remember that the same functionality of object-fit & object-position can be achieved using background - but whenever possible we use object-fit & object-position just cause it's a better practice to have images in HTML - but in IE we just can't) -->
+						<img src="../img/bg_main.jpg" alt="">
 					</div>
 				</div>
 
@@ -51,35 +49,34 @@
 				<div class="content">
 					<section class="generation">
 						<div class="container">
-							<div class="generation__block block"><!-- вижу что эт блок где-то схож с дальнейшими блоками поэтому почему бы не создать нам отдельный блок под это все дело можно его и назвать блок -->
+							<div class="generation__block block">
 								<div class="block__icon">
 									<img src="../img/icons/title/Icon1.png" alt="">
 								</div>
 								<h1 class="block__title">A NEW GENERATION OF VINTAGE BIKE</h1>
-								<div class="block__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </div>
+								<div class="block__text">Every vintage bicycle we purchase is carefully vetted for authenticity and current condition, this means each bicycle can be dated and traced to the manufacturer. After identifying the era, we equip these bikes with components that respect and adhere to the period in which they were initially ridden. Our secret is our very own time machine: our world class workshop. Here, we reinvigorate the bikes to return them to their former glory. Every single detail, big or small, matters to us, and we ensure our bikes look and ride as if they were brand new.</div>
 							</div>
 						</div>
 					</section>
 					<section class="brands">
 						<div class="brands__row">
 							<div class="brands__column brands__column_b">
-								<a href="" class="brands__item item"><!-- одна колонка содержит один item -->
-									<!-- using spans below cause Nesting a div into an anchor tag is not valid -->
+								<a href="" class="brands__item item">
 									<span class="item__logo">
 										<img src="../img/logos/Logo1.png" alt="">
 									</span>
-									<span class="item__image ibg"><!-- как мы уже знаем имейдж нам стоит сделать через ibg чтобы более гибко управлять нашим фоном -->
+									<span class="item__image ibg">
 										<img src="../img/brands/1.jpg" alt="">
 									</span>
 								</a>
 							</div>
 							<div class="brands__column">
-								<div class="brands__content block"><!-- видим что это у нас очень схожа с блоком newgeneration - немножко отличается только размер шрифта текста и текст justified и еще есть какая-то полосочка декоративной и стрелочка. беру просто безбожно копирую весь этот блок блок заимствуем его у generation -->
+								<div class="brands__content block">
 									<div class="block__icon">
 										<img src="../img/icons/title/Icon2.png" alt="">
 									</div>
-									<h2 class="block__title">vintage Oliva</h2><!-- h1 у нас меняется на h2 сразу  -->
-									<div class="block__text block__text_j">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived. </div><!-- модифицируем наш текст как j будет означать justify -->
+									<h2 class="block__title">Colnago Master</h2>
+									<div class="block__text block__text_j">The Colnago Master model line is undoubtedly the evergreen of cycling history. First released in 1983, five different versions of the Colnago Master were introduced until 1998 (the Master, Master Più, Master Olympic, Master Light, and Master X-Light).</div>
 								</div>
 								<div class="brands__image ibg">
 									<img src="../img/brands/2.jpg" alt="">
@@ -87,15 +84,14 @@
 							</div>
 						</div>
 					</section>
-					<section class="brands brands_rev"><!-- здесь модифицирую его как рф то есть reversed order -->
+					<section class="brands brands_rev">
 						<div class="brands__row">
 							<div class="brands__column brands__column_b">
-								<a href="" class="brands__item item"><!-- одна колонка содержит один item -->
-									<!-- using spans below cause Nesting a div into an anchor tag is not valid -->
+								<a href="" class="brands__item item">
 									<span class="item__logo">
 										<img src="../img/logos/Logo2.png" alt="">
 									</span>
-									<span class="item__image ibg"><!-- как мы уже знаем имейдж нам стоит сделать через ibg чтобы более гибко управлять нашим фоном -->
+									<span class="item__image ibg">
 										<img src="../img/brands/4.jpg" alt="">
 									</span>
 								</a>
@@ -105,8 +101,8 @@
 									<div class="block__icon">
 										<img src="../img/icons/title/Icon3.png" alt="">
 									</div>
-									<h2 class="block__title">La Boriosa</h2>
-									<div class="block__text block__text_j">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived. </div>
+									<h2 class="block__title">Mercier Demi-Course Road Bike</h2>
+									<div class="block__text block__text_j">Our Mercier road bicycle is a classic french racing bicycle decked out with typical French parts, like Simplex Shifting or Mafac brakes, all in good working condition. The bold decals are in top condition and are original and the beautiful slightly lilac silver paint is too.</div>
 								</div>
 								<div class="brands__image ibg">
 									<img src="../img/brands/3.jpg" alt="">
@@ -131,8 +127,8 @@
 									<div class="block__icon">
 										<img src="../img/icons/title/Icon4.png" alt="">
 									</div>
-									<h2 class="block__title">retrò Bike - M. Hulot</h2>
-									<div class="block__text block__text_j">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived. </div>
+									<h2 class="block__title">Gianni Motta Personal Road Bike Classic</h2>
+									<div class="block__text block__text_j">Precisely filed lugs, refined cutouts and lightweight tubing. These are only a few of the highlights of this Gianni Motta Personal, a top-class racing bike from Groppello d'Adda (Milan, Italy)</div>
 								</div>
 								<div class="brands__image ibg">
 									<img src="../img/brands/6.jpg" alt="">
@@ -156,17 +152,17 @@
 								<div class="slider__item">
 									<div class="slider__icon"><img src="../img/icons/Icon_twitter.png" alt=""></div>
 									<h3 class="slider__title">AOD New York @aod <span>/ 35 min</span></h3>
-									<div class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</div>
+									<div class="slider__text">We not only specialise in classic bicycles and components, but Steel Vintage Bikes also carefully curates a selection of Modern Steel frames, builds and parts from today’s most sought after frame-builders. We also stock an ever-evolving range of apparel and accessories that are perfect for you, or as a gift for the keen cyclist in your life.</div>
 								</div>
 								<div class="slider__item">
 									<div class="slider__icon"><img src="../img/icons/Icon_twitter.png" alt=""></div>
 									<h3 class="slider__title">AOD New York @aod <span>/ 35 min</span></h3>
-									<div class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</div>
+									<div class="slider__text">Our cycling obsessed team, like our bikes, hail from around the world. We are all here to help you find the perfect ride!</div>
 								</div>
 								<div class="slider__item">
 									<div class="slider__icon"><img src="../img/icons/Icon_twitter.png" alt=""></div>
 									<h3 class="slider__title">AOD New York @aod <span>/ 35 min</span></h3>
-									<div class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</div>
+									<div class="slider__text">Many of our bikes are collectors pieces, but we believe EVERY bike is a unique work of art, and thus cannot be viewed in the same way. Therefore, we only use the best couriers and packaging methods to ship worldwide. Our reputation speaks for itself as we have delivered over 2500 bikes around the globe.</div>
 								</div>
 							</div>
 						</div>
@@ -177,11 +173,9 @@
 								<div class="shop__block block-shop">
 									<div class="block-shop__row">
 										<div class="block-shop__column">
-											<!-- могу использовать наработку item из блока brands: -->
 											<a href="" class="block-shop__item block-shop__item_l item">
 												<span class="item__logo">
 													<img src="../img/logos/Logo4.png" alt="">
-													<!-- только тут еще надпись: -->
 													<span>Shop now</span>
 												</span>
 												<span class="item__image ibg">
@@ -201,7 +195,7 @@
 											</a>
 										</div>
 									</div>
-									<!-- и у нас есть нижний этаж эта картинка у нас одна поэтому можно использовать просто item: -->
+									
 									<a href="" class="block-shop__item item">
 										<span class="item__logo">
 											<img src="../img/logos/Logo4.png" alt="">
@@ -214,7 +208,7 @@
 								</div>
 							</div>
 							<div class="shop__column">
-								<a href="" class="block-shop__item block-shop__item_b item"><!-- For BEM to be entirely correct prob need to insert <div class="shop__block block-shop"> between them (or - if it breaks sth - then mb can leave as is but just change names a little - mb instead of block-shop__item block-shop__item_b here just use shop__item shop__item_b) -->
+								<a href="" class="block-shop__item block-shop__item_b item">
 									<span class="item__logo">
 										<img src="../img/logos/Logo4.png" alt="">
 										<span>Shop now</span>
@@ -282,15 +276,15 @@
 					</div>
 					<div class="subscribe">
 						<div class="container">
-							<div class="subscribe__body"><!-- потому что тут у нас еще больше ограниченa ширина чем просто container -->
+							<div class="subscribe__body">
 								<div class="subscribe__logo">
 									<img src="../img/logo.png" alt="">
 								</div>
 								<div class="subscribe__label">Stay on the saddle!</div>
 								<form action="#" class="subscribe__form">
 									<div class="subscribe__input">
-										<input autocomplete="off" type="text" name="form[]" data-value="enter your email..." class="input req email"><!-- data-value это для того чтобы у меня placeholder работал - пропадал появлялся в общем как и говорил какие-то свои наработки -->
-									</div>
+										<input autocomplete="off" type="text" name="form[]" data-value="enter your email..." class="input req email">
+									</div> 
 									<div class="subscribe__button">
 										<button type="submit" class="subscribe__btn">GO</button>
 									</div>
@@ -308,7 +302,7 @@
 				<div class="footer__address">
 					<p>AOD New York</p>
 					<p>2250 Lexington Avenue</p>
-					<p>New York, NY 10035 - info@domain.com</p>
+					<p>New York, NY 10035 - aod@gmail.com</p>
 				</div>
 			</div>
 			<div class="footer__column">
@@ -336,8 +330,7 @@
 	</div>
 </footer>			</main>
 		</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
 <script src="js/custom.js" ></script>
