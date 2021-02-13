@@ -61,7 +61,7 @@ body.ie {
 		&.slick-next {
 		}
 	}
-	.slick-dots { // отредактировано чтобы сделать нормальные кнопки
+	.slick-dots {
 		padding: 100px 0px 0px 0px;
 		@include flexbox();
 		justify-content: center;
@@ -74,7 +74,7 @@ body.ie {
 				height: 11px;
 				border-radius: 50%;
 				border: 1px solid #c8c8c8;
-				background-color: transparent; // точки должны быть прозрачные внутри
+				background-color: transparent;
 			}
 			&.slick-active {
 				button {

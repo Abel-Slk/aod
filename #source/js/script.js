@@ -1,4 +1,3 @@
-
 $('.wrapper').addClass('loaded');
 
 
@@ -24,4 +23,4 @@ function ibg() {
 		}
 	}
 }
-ibg();
+ibg(); 
